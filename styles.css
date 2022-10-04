@@ -5,7 +5,7 @@
 }
 
 .main_section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
 }
@@ -28,7 +28,7 @@
 
 .rectangle {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 30px;
     background-color: whitesmoke;
 }
@@ -49,6 +49,7 @@
 .nav-lists a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 .login {
@@ -69,13 +70,45 @@ h2 {
     text-align: center;
 }
 
+.vibrate-1 {
+	-webkit-animation: vibrate-1 2.5s linear infinite both;
+	        animation: vibrate-1 2.5s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+
 .form {
     margin-left: 120px;
     margin-right: 120px;
     margin-top: 10vh
 }
 
-label {
+.sign-up label {
     color: #404040;
     width: 120px;
     display: inline-block;
@@ -87,8 +120,8 @@ label {
     
 }
 
-input {
-    width: 250px;
+.sign-up input {
+    width: 300px;
     height: 40px;
     padding-left: 20px;
     background-color:  #c7c4c4;
@@ -96,21 +129,57 @@ input {
     border-radius: 5px;   
 }
 
-.btn {
-    width: 85px;
-    color: #404040;
-    background-color:  #c7c4c4;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    padding: 5px;
-    border: 1px solid #404040;
-    margin-left: 125px;
+.fa-regular {
+    margin-left: -30px;
+    color: #17183B;
+    cursor: pointer;
 }
 
+.checkbox {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    width: 100%;
+    max-width: 400px;
+}
 
+.checkbox a{
+    text-decoration: none;
+}
+
+.submit{
+  margin-top: 20px;
+}
+
+.submit button{
+    width:51.5vh;
+    height:50px;
+    background-color: #f082ac;
+    color: #f2f4fa;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.submit button:hover{
+    background-color: #f082aca6;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.sign-in p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign-in a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
 
 @media (max-width: 428px ) {
     .form {
@@ -119,40 +188,61 @@ input {
 }
 
 @media (max-width: 768px ) {
-    .right-section {
-        width: 100%;
-        height: 100vh;
+    .main_section {
+        flex-direction: column;
     }
-}
 
-@media (max-width: 976px ){
-    .nav-lists {
-        width: 350px;
-        font-size: small;
-        margin-left: 25px;
-    }
-    
-}
-
-@media (max-width: 1227px ) {
-    .btn {
-        margin-left: 0px;
-    }
-}
-
-@media (max-width: 1240px ) {
-
-    .navigation {
-        width: 30%;
+    .rectangle {
+        display: none;
     }
 
     h2 {
         font-size: 27px;
     }
 
+    .submit button {
+        width: 45vw;
+        margin-bottom: 20px;
+    }
+}
+
+ @media (max-width: 604px ) {
+    h2 {
+        font-size: 15;
+    }
+
+    .form {
+        margin-left: 90px;
+    }
+
+.sign-up input {
+    width: 230px;
+}
+
+.fa-regular {
+    margin-left: -52px;
+}
+
+} 
+
+@media (max-width: 1240px ) {
     .nav-lists {
         width: 350px;
-        font-size: small;
-        margin-left: 45px;
+        font-size: 12px;
+        margin-left: 90px;
     }
+
+    .nav-lists > li {
+        margin-left: 10px;
+    }
+
+    .sign-in {
+        margin-bottom: 20px;
+    }
+    
+
+    h2 {
+        font-size: 27px;
+    }
+
 }

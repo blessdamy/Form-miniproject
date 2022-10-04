@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form-project</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -26,26 +27,42 @@
                     </ul>
                 </nav>
             </div>
-            <h2>Welcome To Ivy Foodie's Blog </h2>
+            <h2 class="vibrate-1">Welcome To Ivy Foodie's Blog </h2>
 
             <div class="form">
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstname" placeholder="First Name" required><br><br>
+                <form class="sign-up" action="">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="First Name" required>
+                    <i class="fa-regular fa-user"></i><br><br>
 
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" placeholder="Last Name" required><br><br>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" placeholder="Last Name" required>
+                    <i class="fa-regular fa-user"></i><br><br>
 
-                <label for="email">Email</label>
-                <input type="Email" id="email" placeholder="Email" required><br><br>
+                    <label for="email">Email</label>
+                    <input type="Email" id="email" placeholder="Email" required>
+                    <i class="fa-regular fa-envelope"></i><br><br>
 
-                <label for="password">Password</label>
-                <input type="text" id="password" placeholder="Password" required><br><br>
+                    <label for="password">Password</label>
+                    <input type="text" id="password" placeholder="Password" required>
+                    <i class="fa-regular fa-eye-slash"></i><br><br>
 
-                <label for="password">Confirm Password</label>
-                <input type="text" id="password" placeholder="Confirm Password" required><br><br>
+                    <label for="password">Confirm Password</label>
+                    <input type="text" id="password" placeholder="Confirm Password" required><i class="fa-regular fa-eye-slash"></i><br><br>
+                </form>
 
-                <button  class="btn" onclick="">Submit</button>
-                <!--  -->
+                <div class="checkbox">
+                    <input type="checkbox" id="terms-conditions">
+                <label for="terms-conditions">Creating an account means you’re okay with our <a href="#">Terms of Service, Privacy Policy</a>, and our default <a href="#">Notification Settings</a>.</label>
+
+                </div>
+                <div class="submit">
+                <button>Sign Up</button> 
+                </div> <br> 
+        
+                <div class="sign-in">
+               <p>Already have an account? <a href="#">Sign in</a></p>
+                </div>
         </div>
         
     </div>
